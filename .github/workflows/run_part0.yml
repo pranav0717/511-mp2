@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up job
+    - name: Checkout repository
       uses: actions/checkout@v4
 
     - name: Set up Python 3.10
@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install faiss-cpu h5py numpy pytest
+        pip install faiss-cpu h5py numpy pytest requests
 
     - name: Download SIFT dataset
       run: |
